@@ -32,8 +32,8 @@ async def on_message(message):
         msg = message.content[23:]
         await author.send(msg)
 
-    if message.content.startswith("~쉿해라"):
-        author = message.guild.get_member(int(message.content[5:23]))
+    if message.content.startswith("~뮤트"):
+        author = message.guild.get_member(int(message.content[4:22]))
         role = discord.utils.get(message.guild.roles, name="뮤트") #모든 역할들 중에서 이름이 뮤트인것을 찾으삼
         #대상하고 역할을 찾았으면 이 대상한테 이 역할을 부여해주는 것
         await author.add_roles(role)
